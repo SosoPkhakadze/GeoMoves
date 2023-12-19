@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>GeoMoves</title>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      
+      
+      <div class="icon" onclick="openPage('search')">&#128269;</div>
+      <div class="icon" onclick="openPage('settings')">&#9881;</div>
+      <div class="icon" onclick="openPage('leaderboard')">&#127942;</div>
+      <div class="icon" onclick="openPage('shop')">&#128176;</div>
+      <div class="icon" onclick="openPage('achievements')">🏅</div>
+      <div class="icon" onclick="openPage('purchases')">🛒</div>
+      <div class="icon" onclick="openPage('ads')">&#128247;</div>
+      <div class="icon" onclick="openPage('account')">&#128100;</div>
+    </div>
+    <div class="content">
+      <h1>Welcome to GeoMoves</h1>
+      <div id="mainContent">
+        <!-- Content will be loaded dynamically here -->
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="avatar.js"></script>
+  <script src="leaderboard.js"></script>
+  <script src="shop.js"></script>
+  <script src="achievements.js"></script>
+  <script src="displayUserInfo.js"></script> <!-- Include displayUserInfo.js for displaying user information -->
+</body>
+</html>

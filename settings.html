@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Game Settings</title>
+  <style>
+    /* Additional styles specific to the settings page */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column; /* Stack the children vertically */
+      min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    }
+    
+    .sidebar {
+      position: fixed; /* Set to fixed position */
+      top: 0;
+      left: 0;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: auto; /* Use 'auto' to only show scrollbar when needed */
+      height: 100%; /* Set height to 100% */
+    }
+    
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-left: 120px; /* Adjust the margin to the width of the sidebar */
+    }
+    
+    .icon {
+      font-size: 36px;
+      cursor: pointer;
+      margin-bottom: 40px;
+    }
+    
+    
+    #mainContent {
+      /* Add styles for the main content here */
+    }
+
+    .setting-box {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .setting-box h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .setting-box label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .setting-box input[type="range"],
+    .setting-box select {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .setting-box button {
+      background-color: #4caf50;
+      color: white;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .setting-box button:hover {
+      background-color: #45a049;
+    }
+
+    /* Additional styles for checkboxes */
+    .setting-box input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="icon" onclick="openPage('search')">&#128269;</div>
+      <div class="icon" onclick="openPage('settings')">&#9881;</div>
+      <div class="icon" onclick="openPage('leaderboard')">&#127942;</div>
+      <div class="icon" onclick="openPage('shop')">&#128176;</div>
+      <div class="icon" onclick="openPage('achievements')">🏅</div>
+      <div class="icon" onclick="openPage('purchases')">🛒</div>
+      <div class="icon" onclick="openPage('ads')">&#128247;</div>
+      <div class="icon" onclick="openPage('account')">&#128100;</div>
+    </div>
+    <div class="content">
+      <div id="mainContent">
+        <h2>Game Settings</h2>
+        
+        <!-- Sample buttons and boxes for different settings -->
+        <div class="setting-box">
+          <h3>Audio Settings</h3>
+          <label for="volume">Volume:</label>
+          <input type="range" id="volume" name="volume" min="0" max="100">
+          <br>
+          <button onclick="saveAudioSettings()">Save Audio Settings</button>
+        </div>
+
+        <div class="setting-box">
+          <h3>Graphics Settings</h3>
+          <label for="quality">Graphics Quality:</label>
+          <select id="quality" name="quality">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <br>
+          <button onclick="saveGraphicsSettings()">Save Graphics Settings</button>
+        </div>
+
+        <div class="setting-box">
+          <h3>Language Settings</h3>
+          <label for="language">Select Language:</label>
+          <select id="language" name="language">
+            <option value="English">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+            <option value="georgian">Georgian</option>
+            <option value="russian">Russian</option>
+            <option value="italian">Italian</option>
+          </select>
+          <br>
+          <button onclick="saveLanguageSettings()">Save Language Settings</button>
+        </div>
+
+        <div class="setting-box">
+          <h3>Notification Settings</h3>
+          <label for="notifications">Receive Notifications:</label>
+          <input type="checkbox" id="notifications" name="notifications">
+          <br>
+          <button onclick="saveNotificationSettings()">Save Notification Settings</button>
+        </div>
+
+        <!-- Additional settings boxes -->
+        <div class="setting-box">
+          <h3>Gameplay Settings</h3>
+          <label for="difficulty">Difficulty Level:</label>
+          <select id="difficulty" name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <br>
+          <button onclick="saveGameplaySettings()">Save Gameplay Settings</button>
+        </div>
+
+        <div class="setting-box">
+          <h3>Account Settings</h3>
+          <label for="changePassword">Change Password:</label>
+          <input type="password" id="changePassword" name="changePassword" placeholder="Enter new password">
+          <br>
+          <button onclick="savePassword()">Change Password</button>
+        </div>
+        
+        <!-- Add more settings boxes as needed -->
+
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <!-- Include any additional scripts specific to the settings page -->
+</body>
+</html>

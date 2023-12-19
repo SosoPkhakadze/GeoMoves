@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>GeoMoves</title>
+  <link rel="stylesheet" href="purchase-style.css"> <!-- Add a separate CSS file for purchase page styles -->
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="icon" onclick="openPage('search')">&#128269;</div>
+      <div class="icon" onclick="openPage('settings')">&#9881;</div>
+      <div class="icon" onclick="openPage('leaderboard')">&#127942;</div>
+      <div class="icon" onclick="openPage('shop')">&#128176;</div>
+      <div class="icon" onclick="openPage('achievements')">🏅</div>
+      <div class="icon" onclick="openPage('purchases')">🛒</div>
+      <div class="icon" onclick="openPage('ads')">&#128247;</div>
+      <div class="icon" onclick="openPage('account')">&#128100;</div>
+    </div>
+    <div class="content">
+      <div id="mainContent">
+        <h2>Choose a Coin Package</h2>
+      
+        <button class="coin-package-button" onclick="purchaseCoins(100, 1.99)">
+          <h3>100 Coins</h3>
+          <p>$1.99</p>
+        </button>
+      
+        <button class="coin-package-button" onclick="purchaseCoins(500, 7.99)">
+          <h3>500 Coins</h3>
+          <p>$7.99</p>
+        </button>
+      
+        <button class="coin-package-button" onclick="purchaseCoins(1000, 14.99)">
+          <h3>1000 Coins</h3>
+          <p>$14.99</p>
+        </button>
+      
+        <button class="coin-package-button" onclick="purchaseCoins(5000, 69.99)">
+          <h3>5000 Coins</h3>
+          <p>$69.99</p>
+        </button>
+      
+        <button class="coin-package-button" onclick="purchaseCoins(10000, 119.99)">
+          <h3>10000 Coins</h3>
+          <p>$119.99</p>
+        </button>
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="avatar.js"></script>
+  <script src="leaderboard.js"></script>
+  <script src="shop.js"></script>
+  <script src="achievements.js"></script>
+  <script src="purchase.js"></script>
+</body>
+</html>

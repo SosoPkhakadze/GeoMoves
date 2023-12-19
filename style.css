@@ -1,0 +1,305 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack the children vertically */
+  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}
+
+.sidebar {
+  position: fixed; /* Set to fixed position */
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Use 'auto' to only show scrollbar when needed */
+  height: 100%; /* Set height to 100% */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 120px; /* Adjust the margin to the width of the sidebar */
+}
+
+.icon {
+  font-size: 36px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+
+#mainContent {
+  /* Add styles for the main content here */
+}
+
+/* Additional styling for Leaderboard */
+#mainContent .leaderboard-chart {
+  width: 100%;
+}
+
+#mainContent .header,
+#mainContent .player-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mainContent .player-entry {
+  background-color: #f5f5f5;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#mainContent .player-entry.nino {
+  background-color: #ffcc00; /* Highlight NinoTheMaster */
+}
+
+#mainContent .player-entry:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+#mainContent .player-entry span {
+  flex: 1;
+}
+
+#mainContent .player-entry .score {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+/* Additional styling for Achievements */
+#mainContent .achievements-chart {
+width: 100%;
+}
+
+#mainContent .achievements-entry {
+background-color: #f5f5f5;
+margin: 5px 0;
+padding: 10px;
+border-radius: 8px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+#mainContent .achievements-entry span {
+flex: 1;
+}
+
+#mainContent .achievements-entry .reward {
+background-color: #ffcc00;
+padding: 8px;
+border-radius: 5px;
+}
+
+#mainContent .achievements-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.achievement {
+width: 45%; /* Adjust width as needed */
+margin-bottom: 10px;
+padding: 15px;
+border-radius: 8px;
+background-color: #f5f5f5;
+text-align: center;
+}
+
+.achievement-name {
+font-size: 18px;
+font-weight: bold;
+}
+
+.achievement-desc {
+margin-top: 5px;
+font-size: 14px;
+}
+
+/* Additional styling for Shop */
+#mainContent .shop-info {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+#mainContent .shop-info .coins {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#mainContent .shop-items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#mainContent .shop-item {
+  background-color: #f5f5f5;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#mainContent .shop-item span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#mainContent .shop-item .price {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+#mainContent .shop-item button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#mainContent .shop-item button:hover {
+  background-color: #45a049;
+}
+
+
+
+/* Additional styling for Purchase Page */
+#mainContent .purchase-container {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#mainContent .coin-package-button {
+  background-color: #3498db;
+  color: #ecf0f1;
+  padding: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mainContent .coin-package-button:hover {
+  background-color: #2980b9;
+}
+
+#mainContent .coin-package-button h3 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+#mainContent .coin-package-button p {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+/* Additional styling for Account Page */
+#mainContent .account-info-container {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#mainContent .account-info-container h1 {
+  color: #3498db;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#mainContent .user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#mainContent .user-info p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+#mainContent .user-info span {
+  color: #7f8c8d;
+}
+
+#mainContent .edit-profile-button {
+  background-color: #3498db;
+  color: #ecf0f1;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#mainContent .edit-profile-button:hover {
+  background-color: #2980b9;
+}
+
+/* Additional styling for User Information in Account Page */
+#mainContent h2 {
+  color: #3498db;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#mainContent p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#mainContent strong {
+  color: #2c3e50;
+}
+
+/* Styling for each user information field */
+#mainContent p strong {
+  display: inline-block;
+  width: 150px; /* Adjust the width based on your design */
+}
+
+/* Styling for the edit profile button */
+#mainContent .edit-profile-button {
+  background-color: #3498db;
+  color: #ecf0f1;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+#mainContent .edit-profile-button:hover {
+  background-color: #2980b9;
+}
